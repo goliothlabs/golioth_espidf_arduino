@@ -1,0 +1,9 @@
+[submodule "third_party/golioth-firmware-sdk"]
+	path = third_party/golioth-firmware-sdk
+	url = https://github.com/golioth/golioth-firmware-sdk.git
+[submodule "third_party/arduino"]
+	path = third_party/arduino
+	url = https://github.com/espressif/arduino-esp32.git
+[submodule "third_party/esp32-arduino-lib-builder"]
+	path = third_party/esp32-arduino-lib-builder
+	url = https://github.com/espressif/esp32-arduino-lib-builder.git
