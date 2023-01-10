@@ -11,6 +11,9 @@
 
 #define TAG "golioth_espidf_arduino"
 
+// LED connection: LED_PIN--LED--Resistor--Ground
+#define LED_PIN 23
+
 // Current firmware version
 const char* _current_version = "1.0.0";
 
@@ -41,7 +44,7 @@ extern "C" void app_main(void) {
     initArduino();
     // This is where the Arduino setup() code would be found
 
-    pinMode(23, OUTPUT);
+    pinMode(LED_PIN, OUTPUT);
 
     // Arduino-like setup()
     Serial.begin(115200);
@@ -85,7 +88,7 @@ extern "C" void app_main(void) {
     Serial.println("This is where Arduino loop() functions happen");
     // This while-loop is the equivalent of the Arduino Loop
     while(1) {
-        digitalWrite(23, counter%2);
+        digitalWrite(LED_PIN, counter%2);
         Serial.print("Hello Golioth! #");
         Serial.println(counter);
         ++counter;

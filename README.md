@@ -86,12 +86,18 @@ building the project.
    idf.py flash monitor
    ```
 
+**Optional:** This program uses an LED attached to pin 23. This LED may be left
+out, or remapped at the top of the app_main.c file.
+
 ## Expected Behavior
 
-This demonstration happen in three stages:
+This demonstration can be described in three stages:
 
-1. Establish a connection to WiFi and to Golioth
-2. Demonstrate the Arduino core syntax printing to Serial and counting in a loop
+1. Establish a connection to WiFi (using the Arduino library) and to Golioth
+2. Demonstrate the Arduino core syntax
+   1. Print using `Serial.println()`
+   2. Blink an LED using `DigitalWrite()`
+   3. Loop using `delay()`
 3. Demonstrate the Golioth SDK:
    1. Register for OTA firmware updates
    2. Send log messages to the server
